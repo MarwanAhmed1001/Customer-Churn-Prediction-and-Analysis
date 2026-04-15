@@ -1,0 +1,25 @@
+
+BUILD OPTIONS (recommended, on a Windows PC)
+--------------------------------------------
+1) Copy the entire extracted folder to a Windows PC.
+2) Install Python 3.8+ on Windows and ensure pip is available.
+3) Open an elevated CMD or PowerShell in that folder.
+4) (Optional) create venv:
+   python -m venv venv
+   venv\Scripts\activate
+
+5) Install PyInstaller:
+   pip install pyinstaller
+
+6) Build exe:
+   pyinstaller --onefile --noconsole app.py
+
+7) The built exe will appear in the 'dist' folder: dist\\app.exe
+
+ALTERNATIVE (if you want a GUI and icon):
+   pyinstaller --onefile --windowed --icon=app.ico app.py
+
+WINE (Linux) attempt:
+---------------------
+We also attempt a wine-based build in Colab (best-effort). This may fail depending on the environment.
+If it fails, follow the Windows steps above on a Windows machine.
